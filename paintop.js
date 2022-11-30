@@ -99,12 +99,11 @@ function loadCss(url) {
     head.appendChild(link);
 }
 function loadPage() {
-    
     let url = window.location.href.split('#')[0] + "#groups";
     window.open(url, "_self");
     setTimeout(() => {
         document.getElementsByClassName('pageHolder')[0].innerHTML = wireframes['gulpsection'];
-    }, 1)
+    }, 10)
 }
 function getWireframeCode() {
     return `<img src="https://photop-content.s3.amazonaws.com/PostImages/6386d66f436822b4340bc5c80" alt="Gulp x Siri Fanart (IT SHOULD BURN IN HELL)" title="Gulp x Siri Fanart (IT SHOULD BURN IN HELL)" height=50% width=50%></img><p class="pageText">Siri x Gulp fanfic by Ker and Heart<br><br>Siri looked at gulpy, While watching the teletubbies sunset thingy . “UwU this is such a hot moment 😍” Gulpy said in a very uwu seductive tone. The baby sun was traumatized to see what happened next, Those two mfs were making out. *Kissy wissy noises owo*. The two gays were unaware of who were watching them. “EW 😭” Someone yelled behind them. <br><br>“WE WANTED TO PLAY UNO, NOT SEE YOU LITTLE SH*TS MAKING OUT, MORONS” Crusher yelled, While Ker was sobbing their eyes out and Avakpup was spilling bleach on their eyes despite the pain. “GO TO THE HOUSE AND DO THAT, WERE PLAYING UNO, SHOO U RUINED UNO FOR US SMH” Heart yelled.</p>`;
