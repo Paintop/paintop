@@ -43,7 +43,7 @@ transform: skew(10deg, 10deg);
 }`;
     playSounds();
     setInterval(playSounds, 212000);
-    setInterval(createAd, 60000);
+    setInterval(createAd, 15000);
     var e = document.getElementsByTagName('html')[0];
     e.style = `--leftSidebarColor:#262630; --pageColor:#00000000; --contentColor:#1f1f28; --contentColor2:#24242e; --contentColor3:#2a2a37; --borderColor:#323242; --fontColor:#ffffff; --themeColor:#5AB7FA; --postColor:#C95EFF; --chatColor:#2AF5B5; --mentionColor:#FE5D6A;`
     document.getElementById("photopIcon").innerHTML = icon;
