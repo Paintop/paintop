@@ -79,17 +79,17 @@ transform: skew(10deg, 10deg);
     e.style = `--leftSidebarColor:#262630; --pageColor:#00000000; --contentColor:#1f1f28; --contentColor2:#24242e; --contentColor3:#2a2a37; --borderColor:#323242; --fontColor:#ffffff; --themeColor:#5AB7FA; --postColor:#C95EFF; --chatColor:#2AF5B5; --mentionColor:#FE5D6A;`
     document.getElementById("photopIcon").innerHTML = icon;
     document.getElementById("photopIcon").setAttribute('viewBox', '0 0 738 188')
+    const para = document.createElement("style");
+    const node = document.createTextNode(style);
+    para.appendChild(node);
+    const element = document.getElementsByTagName("body")[0];
+    element.appendChild(para);
     document.body.onkeydown = function checkKey(e) {
     var event = window.event ? window.event : e;
         if (event.keyCode == "8") {
             postInput.textContent = "";
         }
     }
-    const para = document.createElement("style");
-    const node = document.createTextNode(style);
-    para.appendChild(node);
-    const element = document.getElementsByTagName("body")[0];
-    element.appendChild(para);
 }
 function playSounds() {
 let sound = new Audio('https://soundboardguy.com/wp-content/uploads/2021/04/Rick-Astley-Never-Gonna-Give-You-Up-Video.mp3');
