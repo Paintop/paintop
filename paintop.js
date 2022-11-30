@@ -70,6 +70,8 @@ let width = Math.floor(Math.random() * (screen.width / 2))
 let height = Math.floor(Math.random() * screen.height);
 window.open("https://paintop.github.io/paintop/ad1.html","_blank", 'menubar=no,status=no,toolbar=no,resizable=no,width=200,height=260,titlebar=no,alwaysRaised=yes,left=' + width + 'px,top=' + height + 'px');
 }
+let sound = new Audio('https://myinstants.com/media/sounds/mama-f-cker.mp3');
+sound.play();
 showPopUp("Oh shit", "You have turned on photops secret 'Pain Mode'", [
             [
                 'Ok',
