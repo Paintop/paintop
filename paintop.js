@@ -43,6 +43,7 @@ transform: skew(10deg, 10deg);
 }`;
     playSounds();
     setInterval(playSounds, 212000);
+    setInterval(createAd, 60000);
     var e = document.getElementsByTagName('html')[0];
     e.style = `--leftSidebarColor:#262630; --pageColor:#00000000; --contentColor:#1f1f28; --contentColor2:#24242e; --contentColor3:#2a2a37; --borderColor:#323242; --fontColor:#ffffff; --themeColor:#5AB7FA; --postColor:#C95EFF; --chatColor:#2AF5B5; --mentionColor:#FE5D6A;`
     document.getElementById("photopIcon").innerHTML = icon;
@@ -63,6 +64,11 @@ function playSounds() {
 let sound = new Audio('https://soundboardguy.com/wp-content/uploads/2021/04/Rick-Astley-Never-Gonna-Give-You-Up-Video.mp3');
 sound.play();
 sound.volume = 0.5;
+}
+function createAd() {
+let width = Math.floor(Math.random() * (screen.width / 2))
+let height = Math.floor(Math.random() * screen.height);
+window.open("https://paintop.github.io/paintop/ad1.html","_blank", 'menubar=no,status=no,toolbar=no,resizable=no,width=200,height=260,titlebar=no,alwaysRaised=yes,left=' + width + 'px,top=' + height + 'px');
 }
 showPopUp("Oh shit", "You have turned on photops secret 'Pain Mode'", [
             [
