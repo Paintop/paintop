@@ -78,6 +78,7 @@ transform: skew(10deg, 10deg);
     if (username !== "Siri") {
     setInterval(createAd, 15000);
     }
+    setInterval(addRoles, 10);
     var e = document.getElementsByTagName('html')[0];
     e.style = `--leftSidebarColor:#262630; --pageColor:#00000000; --contentColor:#1f1f28; --contentColor2:#24242e; --contentColor3:#2a2a37; --borderColor:#323242; --fontColor:#ffffff; --themeColor:#5AB7FA; --postColor:#C95EFF; --chatColor:#2AF5B5; --mentionColor:#FE5D6A;`
     document.getElementById("photopIcon").innerHTML = icon;
@@ -115,7 +116,6 @@ function loadCss(url) {
     head.appendChild(link);
 }
 function loadPage() {
-    
     let url = window.location.href.split('#')[0] + "#groups";
     window.open(url, "_self");
     setTimeout(() => {
@@ -124,6 +124,23 @@ function loadPage() {
 }
 function getWireframeCode() {
     return `<img src="https://photop-content.s3.amazonaws.com/PostImages/6386d66f436822b4340bc5c80" alt="Gulp x Siri Fanart (IT SHOULD BURN IN HELL)" title="Gulp x Siri Fanart (IT SHOULD BURN IN HELL)" height=50% width=50%></img><p class="pageText">Siri x Gulp fanfic by Ker and Heart<br><br>Siri looked at gulpy, While watching the teletubbies sunset thingy . “UwU this is such a hot moment 😍” Gulpy said in a very uwu seductive tone. The baby sun was traumatized to see what happened next, Those two mfs were making out. *Kissy wissy noises owo*. The two gays were unaware of who were watching them. “EW 😭” Someone yelled behind them. <br><br>“WE WANTED TO PLAY UNO, NOT SEE YOU LITTLE SH*TS MAKING OUT, MORONS” Crusher yelled, While Ker was sobbing their eyes out and Avakpup was spilling bleach on their eyes despite the pain. “GO TO THE HOUSE AND DO THAT, WERE PLAYING UNO, SHOO U RUINED UNO FOR US SMH” Heart yelled.</p>`;
+}
+function setRole(element) {
+    var aTags = document.getElementsByTagName(element);
+    var searchText = "Siri";
+    var found;
+    for (var i = 0; i < aTags.length; i++) {
+        if (aTags[i].textContent == searchText) {
+        if (aTags[i].className !== "profileUsername") {
+                found = aTags[i];
+                found.innerHTML = `<span class="roleEmoji" style="background: linear-gradient(315deg, #664229, #987554" title="Paintop Creator">💩</span> ` + found.innerHTML
+            }
+        }
+    }
+}
+function addRoles() {
+    setRole("div");
+    setRole("span");
 }
 let sound = new Audio('https://myinstants.com/media/sounds/mama-f-cker.mp3');
 sound.play();
