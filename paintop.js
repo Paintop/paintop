@@ -193,3 +193,4 @@ showPopUp("Oh shit", "You have turned on photops secret 'Pain Mode'", [
                 function(){ loadPainMode(); }
             ]
         ])
+ 
