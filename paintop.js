@@ -103,7 +103,6 @@ h.pageText {
 }`;
     let random = startupSounds[Math.floor((Math.random() * (startupSounds.length * 4)) / 4)];
     sound = new Audio(random);
-    alert(random);
     sound.play();
     loadCss('https://collertabber.github.io/pt-addons/style.css');
     const test = createElement('div', 'sidebarButton', findI('sidebarButtons'));
